@@ -1,35 +1,27 @@
-
-//
-// turn.returnGuess();    // => 'pug'
-//
-//
-// turn.returnCard();     // => { id: 1,
-//                        //      question: 'What is Robbie\'s favorite animal',
-//                        //      answers: ['sea otter', 'pug', 'capybara'],
-//                        //      correctAnswer: 'sea otter'
-//                        //    }
-//
-//
-// turn.evaluateGuess();  // => false
-//
-//
-// turn.giveFeedback();   // => incorrect!
-
 class Turn {
-  constructor() {
-
+  constructor(userGuess, flashCard) {
+    this.userGuess = userGuess;
+    this.flashCard = flashCard;
   }
+
   returnGuess() {
-
+    return this.userGuess;
   }
+
   returnCard() {
-
+    return this.flashCard;
   }
+
   evaluateGuess() {
-
+    return this.userGuess === this.flashCard.correctAnswer
   }
-  giveFeedback() {
 
+  giveFeedback() {
+    if (this.evaluateGuess() === true) {
+      return 'correct!'
+    } else {
+      return 'incorrect!'
+    }
   }
 }
 
