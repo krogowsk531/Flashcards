@@ -13,7 +13,7 @@ describe('Round', function() {
     card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
     deck = new Deck([card1, card2, card3]);
     round = new Round(deck);
-  })
+  });
 
   it('should be a function', function() {
     expect(Round).to.be.a('function');
@@ -55,12 +55,5 @@ describe('Round', function() {
     expect(round.calculatePercentCorrect()).to.equal(100);
     round.takeTurn('spleen');
     expect(round.calculatePercentCorrect()).to.equal(50);
-  });
-
-  it('should end the round by printing out percentage correct message', function() {
-    round.takeTurn('sea otter');
-    round.takeTurn('spleen');
-    round.takeTurn('pug');
-    expect(round.endRound()).to.equal(`** Round over! ** You answered 50% of the questions correctly!`);
   });
 });

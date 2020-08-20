@@ -6,9 +6,11 @@ class Round {
     this.turns = 0;
     this.incorrectGuesses = [];
   }
+
   returnCurrentCard() {
     return this.deckCards[this.turns]
   }
+
   takeTurn(guess) {
     const card = this.deckCards[this.turns];
     this.turns ++;
