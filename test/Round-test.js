@@ -13,7 +13,7 @@ describe('Round', function() {
     card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
     deck = new Deck([card1, card2, card3]);
     round = new Round(deck);
-  })
+  });
 
   it('should be a function', function() {
     expect(Round).to.be.a('function');
