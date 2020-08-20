@@ -16,6 +16,6 @@ npm install
 * Run node index.js in the terminal to start the game
 ```bash
 node index.js
-
+```
 
 * The user will be asked to answer a series of questions related to fundamental topics in JavaScript.  If they do not get 90% of them correct the game will continue to run until that score is achieved.  The user can always use control C to exit the game.
